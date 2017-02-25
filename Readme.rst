@@ -73,16 +73,16 @@ or::
 
 Notice that I add some custom rules.
 
-1. Line breaks is preserved. (converted to '<br/>')
-2. Leading space is preserved. (converted to ``\ `` which is a space in AsciiMath)
+1. Line breaks is preserved. (converted to ``<br/>``)
+2. Leading space is preserved. (converted to ``'\ '`` which is a space in AsciiMath)
 
 Customization
 **************
 
-You can modify the `asciimath.css`. The style is also dynamically added when Pelican compiling the source to html.
+You can modify the ``asciimath.css``. The style is also dynamically added when Pelican compiling the source to html.
 
 1. Each inline asciimath is wrap in a ``.asciimath-inline`` class.
 
 2. Each line in asciimath directive is wrap in a ``.asciimath-line`` class and the directive is wrap in ``.asciimath-block``.
 
-By default, `asciimath.css` centeralize the asciimath directive and add some margin between lines in a directive.
+By default, ``asciimath.css`` centeralize the asciimath directive and add some margin between lines in a directive.
