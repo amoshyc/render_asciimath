@@ -1,7 +1,7 @@
 Render AsciiMath
 #######################
 
-This is a Pelican_ plugin to render AsciiMath_ . It makes use of Mathjax_ with config ``AM_HTMLorMML`` and the mathjax script is loaded dynamically, just like `render math`_. But unlike `render math`_ , this plugin is very simple as I wrote it for my personal use. Currently, it only supports **articles written in restructuredText**
+This is a Pelican_ plugin to render AsciiMath_ . It makes use of Mathjax_ with config ``AM_HTMLorMML`` and the mathjax script is loaded dynamically, just like `render math`_. But unlike `render math`_ , this plugin is very simple as I wrote it for my personal use. Currently, it only supports **articles written in restructuredText**.
 
 .. _Pelican: http://docs.getpelican.com/en/stable/
 .. _AsciiMath: http://asciimath.org/
@@ -16,25 +16,43 @@ To enable this plugin, simply add the path of this plugin (an absolute path or a
     PLUGIN_PATHS = ["plugins"]
     PLUGINS = ["render_asciimath"]
 
+if file structure is something like::
+
+    <project folder>
+    ├── content
+    ├── develop_server.sh
+    ├── fabfile.py
+    ├── Makefile
+    ├── output
+    ├── pelicanconf.py
+    ├── plugins
+    │   ├── extract_toc
+    │   ├── render_asciimath
+    │   ├── render_math
+    │   └── tag_cloud
+    ├── publishconf.py
+    └── themes
+
+
 Usage
 ************
 
 Inline Markup
 ==============
 
-Just write it and render your pelican project as usual. No hacking on the theme is needed unless you want to custom the style.
+Just write it and render your pelican project as usual.
 
 ::
 
-    So the solution is :am:`x = (-b +- sqrt(b^2 - 4ac)) / (2a)` .
+    So the solution is :am:`x = (-b +- sqrt(b^2 - 4ac)) / (2a)`.
 
 or::
 
-    So the solution is :asciimath:`x = (-b +- sqrt(b^2 - 4ac)) / (2a)` .
+    So the solution is :asciimath:`x = (-b +- sqrt(b^2 - 4ac)) / (2a)`.
 
 is rendered as
 
-.. image:: http://i.imgur.com/wGvM3vt.png
+.. image:: https://imgur.com/BOtsJF2.png
 
 If you use a lot of inline AsciiMath in your article and don't want to type the ``:am:`` every time, you can set up the ``default-role`` to AsciiMath. Insert::
 
@@ -42,7 +60,7 @@ If you use a lot of inline AsciiMath in your article and don't want to type the 
 
 to the begining of your article content. And then you can use::
 
-    So the solution is `x = (-b +- sqrt(b^2 - 4ac)) / (2a)` .
+    So the solution is `x = (-b +- sqrt(b^2 - 4ac)) / (2a)`.
 
 to write inline AsciiMath. Notice that it is wrapped in **single backtick**.
 
@@ -69,7 +87,7 @@ or::
             a = 1
             b = 2
 
-.. image:: http://imgur.com/a7S6sbj.png
+.. image:: https://imgur.com/hQLR5d3.png
 
 Notice that I add some custom rules.
 
