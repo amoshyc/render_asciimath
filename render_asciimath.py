@@ -12,7 +12,7 @@ mathjax_script = '''
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src =
-     "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML";
+     "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=AM_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
 
     // style
